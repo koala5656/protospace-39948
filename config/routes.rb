@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  resources :prototypes #, only: [:index, :new, :create, :show, :edit, :update, :destroy](resourcesは7つのアクションをまとめてルーティング設定できるので、7つのアクション全て記述したらonly以下は不要)
 end

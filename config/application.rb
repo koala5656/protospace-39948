@@ -10,6 +10,8 @@ module Protospace39948
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.active_storage.variant_processor = :mini_magick
+    #画像処理にminimagickを使用するために記述。カリキュラム参考にした。
 
     # Configuration for the application, engines, and railties goes here.
     #
