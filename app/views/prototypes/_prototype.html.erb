@@ -8,7 +8,7 @@
       <%= prototype.catch_copy %>
       <!--投稿したキャッチコピーを出力する-->
     </p>
-    <%= link_to "by #{prototype.user.name}", root_path, class: :card__user %>
+    <%= link_to "by #{prototype.user.name}", user_path(prototype.user_id), class: :card__user %>
     <!--投稿者名を出力する-->
   </div>
 </div>

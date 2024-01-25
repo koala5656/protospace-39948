@@ -7,4 +7,11 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :prototypes #, only: [:index, :new, :create, :show, :edit, :update, :destroy](resourcesは7つのアクションをまとめてルーティング設定できるので、7つのアクション全て記述したらonly以下は不要)
+
+  resources :prototypes do
+    resources :comments, only: :create
+  end
+
+  resources :users, only: :show
+  
 end
